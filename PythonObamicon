@@ -23,7 +23,7 @@ for x in image_list:
         x = darkBlue
     elif x[0] + x[1] + x[2] > 350:
         x = lightBlue
-    elif x[0] + x[1] + x[2] > 182:
+    elif x[0] + x[1] + x[2] > 150:
         x = red
     else:
         x = yellow
