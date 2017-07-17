@@ -1,0 +1,19 @@
+class Network:
+    count = 0
+    s = set([])
+
+    def addMember(user):
+        if user not in s:
+            s.add(user)
+            count = count + 1
+
+    def deleteMember(user):
+        if user in s:
+            s.discard(user)
+            count = count - 1
+
+    def printList:
+        print s
+
+    def printCon(user):
+        'get user from set and print connections'

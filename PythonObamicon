@@ -7,7 +7,7 @@ lightBlue = (112, 150, 158)
 yellow = (252, 227, 166)
 
 # Import image.
-my_image = Image.open("/Users/siyukw/Desktop/Codes/GWC training/inputPic.jpg") #change IMAGENAME to the path on your computer to the image you're using
+my_image = Image.open("/Users/siyukw/Desktop/Codes/Freshman year/GWC training/b.jpg") #change IMAGENAME to the path on your computer to the image you're using
 image_list = my_image.getdata()
 image_list = list(image_list) #THis will hold a list of
 
@@ -18,15 +18,16 @@ recolored = [] #list holding the pixel data for the new image.
 #Good numbers to start with for intensity - 182, 364, 546 - but your numbers may vary
 #YOUR CODE to loop through the original list of pixels and build a new list based on intensity should go here.
 for x in image_list:
+    sum = x[0] + x[1] + x[2]
 
-    if x[0] + x[1] + x[2] > 500:
-        x = darkBlue
-    elif x[0] + x[1] + x[2] > 350:
-        x = lightBlue
-    elif x[0] + x[1] + x[2] > 150:
-        x = red
+    if sum > 500:
+        x = (244, 242, 243)
+    elif sum > 430:
+        x = (158, 188, 159)
+    elif sum > 220:
+        x = (101, 98, 86)
     else:
-        x = yellow
+        x = (35, 9, 3)
 
     recolored.append(x)
 
